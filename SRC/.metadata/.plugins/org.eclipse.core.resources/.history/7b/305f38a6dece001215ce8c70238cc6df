@@ -1,0 +1,7 @@
+package com.bukkit.dallen6.survivalgamesautomated;
+
+import java.util.Properties;
+
+public class PluginProperties extends Properties{
+	
+}

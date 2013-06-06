@@ -1,0 +1,5 @@
+name: SurvivalGamesAutomated
+version: 0
+description: Automates a SG game.
+author: dallen6 skmike95
+main com.bukkit.dallen6.survivalgamesautomated

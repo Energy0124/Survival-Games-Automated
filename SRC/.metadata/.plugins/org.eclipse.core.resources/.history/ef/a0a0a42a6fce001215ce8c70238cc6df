@@ -1,0 +1,15 @@
+package com.bukkit.dallen6.survivalgamesautomated;
+
+import org.bukkit.event.Listener;
+
+public class BasicPlayerListener implements Listener {
+public SurvivalGamesAutomated plugin;
+
+
+public BasicPlayerListener(SurvivalGamesAutomated instance){
+	plugin = instance;
+	
+	
+}
+	
+}

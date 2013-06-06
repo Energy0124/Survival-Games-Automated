@@ -1,0 +1,14 @@
+name: SurvivalGamesAutomated
+ version: 1.4.1
+ description: Enables you to set an automtic survival games arena
+ author: dallen6
+ authors: [skmike95] 
+ 
+ main: com.bukkit.dallen6.survivalgamesautomated
+ 
+ commands:
+   sga start:
+     description: Force start a match.
+   sga stop:
+     description: Force stop a match.
+     

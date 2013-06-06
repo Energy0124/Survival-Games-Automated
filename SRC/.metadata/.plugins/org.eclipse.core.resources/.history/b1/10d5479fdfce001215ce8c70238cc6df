@@ -1,0 +1,13 @@
+package com.bukkit.dallen6.survivalgamesautomated;
+
+import java.util.Properties;
+
+public class PluginProperties extends Properties{
+
+	private static final long serialVersionUID = 0L;
+	private String fileName;
+	public PluginProperties(String file){
+		this.fileName = file;
+	}
+	
+}

@@ -1,0 +1,14 @@
+package com.bukkit.dallen6.survivalgamesautomated;
+
+import org.bukkit.event.Listener;
+
+public class SGPlayerListener implements Listener{
+public Main plugin;
+public SGPlayerListener(Main instance) {
+	plugin = instance;
+}
+}
+
+
+
+

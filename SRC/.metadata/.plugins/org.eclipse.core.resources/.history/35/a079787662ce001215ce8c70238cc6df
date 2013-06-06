@@ -1,0 +1,10 @@
+name: SurvivalGamesAutomated
+main: com.bukkit.dallen6.survivalgamesautomated
+version 0.0.1
+commands:
+  start:
+    description: Forces the start of the match.
+  stop:
+    description: Forces the stop of a match.
+  sga:
+    description: Displays plugin basic info.

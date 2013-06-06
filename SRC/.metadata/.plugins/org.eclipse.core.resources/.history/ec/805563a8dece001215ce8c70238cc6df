@@ -1,0 +1,10 @@
+package com.bukkit.dallen6.survivalgamesautomated;
+
+public class LoadSettings {
+	public int StatingStats;
+	public String credit;
+	
+	public static void loadMain(){
+		String propertiesFile = SurvivalGamesAutomated.maindirectory + "config.yml";
+	}
+}

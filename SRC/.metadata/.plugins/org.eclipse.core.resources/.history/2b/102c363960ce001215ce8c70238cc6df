@@ -1,0 +1,6 @@
+name: Survival Games Automated
+main: com.bukkit.dallen6.survivalgamesautomated
+version 0.0.1
+commands:
+  start:
+    description: Forces the start of the match.

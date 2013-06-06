@@ -1,0 +1,16 @@
+package com.bukkit.dallen6.survivalgamesautomated;
+
+public class LoadSettings {
+	public int startingPower;
+	public String currentPower;
+	
+	public static void loadMain(){
+		String propertiesFile = SurvivalGamesAutomated.maindirectory + "config.yml";
+		PluginProperties properties = new PluginProperties(propertiesFile);
+		properties.load();
+		
+		 startingPower = properties.getInteger("startingStats", 0);
+		 currentPower = properties.getString("Name", "Power");
+		properties.save( "=== Survival Games Main Config ===");
+}
+}

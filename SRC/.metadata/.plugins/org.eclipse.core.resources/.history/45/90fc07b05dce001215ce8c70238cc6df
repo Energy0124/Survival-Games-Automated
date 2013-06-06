@@ -1,0 +1,6 @@
+package com.bukkit.dallen6.survivalgamesautomated;
+import org.bukkit.*;
+import org.bukkit.plugin.java.JavaPlugin;
+public class SurvivalGamesAutomated extends JavaPlugin{
+
+}
