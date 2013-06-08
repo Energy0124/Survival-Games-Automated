@@ -1,0 +1,35 @@
+package com.bukkit.dallen6.survivalgamesautomated;
+
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
+
+@SuppressWarnings("unused")
+public class SGPlayerListener implements Listener{
+public Main plugin;
+public SGPlayerListener(Main instance) {
+	plugin = instance;
+}
+
+@EventHandler(priority = EventPriority.HIGHEST)
+public void onPlayerJoin(PlayerJoinEvent event){
+	event.getPlayer().sendMessage(ChatColor.GREEN + "This Server Is Running SurvivalGamesAutomated Alpha by Dallen6 and Omega221!");
+}
+@EventHandler(priority = EventPriority.HIGHEST)
+public void onPlayerMove(PlayerMoveEvent e){
+	
+}
+
+
+
+}
+
+
+
+

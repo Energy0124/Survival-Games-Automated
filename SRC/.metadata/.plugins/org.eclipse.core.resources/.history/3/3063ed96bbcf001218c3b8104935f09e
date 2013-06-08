@@ -1,0 +1,10 @@
+name: SurvivalGamesAutomated
+version: 0
+author: dallen6 skmike95
+main: com.bukkit.dallen6.survivalgamesautomated.Main
+commands:
+   sga:
+     description: Default command for plugin
+     usage: /sga [Value]
+     permission: survivalgamesautomated.player
+     permission-message: You don't have <permission>

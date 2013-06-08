@@ -5,6 +5,6 @@ main: com.bukkit.dallen6.survivalgamesautomated.Main
 commands:
    sga:
      description: Default command for plugin
-     usage: /sga []
+     usage:  
      permission: survivalgamesautomated.player
      permission-message: You don't have <permission>

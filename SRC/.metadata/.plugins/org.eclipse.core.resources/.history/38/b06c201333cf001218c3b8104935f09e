@@ -1,0 +1,38 @@
+package com.bukkit.dallen6.survivalgamesautomated;
+
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
+
+public class SGPlayerListener implements Listener{
+public Main plugin;
+public SGPlayerListener(Main instance) {
+	plugin = instance;
+}
+
+@EventHandler(priority = EventPriority.HIGHEST)
+public void onPlayerJoin(PlayerJoinEvent event){
+	event.getPlayer().sendMessage(ChatColor.GREEN + "This Server Is Running SurvivalGamesAutomated Alpha by Dallen6 and Omega221!");
+}
+public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
+	if(cmd.getName().equalsIgnoreCase("basic")){ 
+		// If the player typed /basic then do the following...
+		sender.sendMessage("Its the listener");
+		// doSomething
+		return true;
+	} //If this has happened the function will return true. 
+        // If this hasn't happened the a value of false will be returned.
+	return false; 
+}
+
+
+}
+
+
+
+

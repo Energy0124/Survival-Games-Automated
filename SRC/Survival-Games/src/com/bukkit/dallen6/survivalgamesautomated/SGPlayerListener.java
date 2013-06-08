@@ -1,12 +1,26 @@
 package com.bukkit.dallen6.survivalgamesautomated;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.World;
+import org.bukkit.WorldCreator;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
 
+
+
+@SuppressWarnings("unused")
 public class SGPlayerListener implements Listener{
+
+Location temp;
 public Main plugin;
 public SGPlayerListener(Main instance) {
 	plugin = instance;
@@ -14,8 +28,24 @@ public SGPlayerListener(Main instance) {
 
 @EventHandler(priority = EventPriority.HIGHEST)
 public void onPlayerJoin(PlayerJoinEvent event){
-	event.getPlayer().sendMessage(ChatColor.GREEN + "This Server Is Running SurvivalGamesAutomated Alpha by dallen6 and skmike95!");
+	event.getPlayer().sendMessage(ChatColor.GREEN + "This Server Is Running SurvivalGamesAutomated Alpha by Dallen6 and Omega221!");
 }
+
+@EventHandler(priority = EventPriority.HIGHEST)
+public void onPlayerMove(PlayerMoveEvent e){
+	if(Main.gameHasStarted == false){
+	temp = e.getPlayer().getLocation();
+	e.getPlayer().teleport(temp);
+	}
+}
+
+
+
+@EventHandler(priority = EventPriority.HIGHEST)
+public void PlayerDeathEvent(PlayerDeathEvent e){
+
+}
+
 }
 
 

@@ -1,0 +1,143 @@
+package com.bukkit.dallen6.survivalgamesautomated;
+
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.GameMode;
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.event.Event;
+import org.bukkit.plugin.PluginManager;
+import org.bukkit.plugin.java.JavaPlugin;
+
+import com.sk89q.worldedit.Vector;
+import com.sk89q.worldedit.bukkit.WorldEditPlugin;
+import com.sk89q.worldedit.bukkit.selections.CuboidSelection;
+import com.sk89q.worldedit.bukkit.selections.Selection;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Logger;
+
+@SuppressWarnings("unused")
+public class Main extends JavaPlugin{
+	private SGPlayerListener PlayerListener = new SGPlayerListener(this);
+	
+	private static final Logger log = Logger.getLogger("Minecraft");
+	static String maindirectory = "SurvivalGamesAutomated/"; 
+	
+	static File stats = new File(maindirectory + "Users.accounts");
+@Override
+public void onEnable(){
+	new File(maindirectory).mkdir();
+	if(!stats.exists()){
+		try {
+			stats.createNewFile();
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+		LoadSettings.loadMain();
+	}
+	PluginManager pm = getServer().getPluginManager();
+	pm.registerEvents(this.PlayerListener, this);
+	
+	log.info("SurvivalGamesAutomated Enabled Sucessfully!");
+}
+
+@Override
+public void onDisable(){
+	log.info("SurvivalGamesAutomated Disabled!");
+
+
+
+
+
+	
+                 
+		
+		
+	
+
+		}
+
+
+public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
+	
+	if(cmd.getName().equalsIgnoreCase("sga")){ 
+		Player player = (Player)sender;
+	
+		if(args.length == 1 && args[0].equalsIgnoreCase("help")){
+			Location[] Spawns = new Location[20];
+		Location l1;
+			sender.sendMessage(ChatColor.GREEN + "Use /sga setspawn 1                    " +
+					"/sga setspawn 2                     " +
+					"/sga setspawn 3                   " +
+					"/sga setspawn 4                   " +
+					"etc. Until you have 10 spawns           " +
+					"Then you're ready! Have players do /sga join");
+			}else if(args.length == 0){
+		sender.sendMessage(ChatColor.GREEN + "Designed By: Dallen6 and Omega221, Do /sga help for commands!");
+			}
+		else if (args.length == 2) {
+            if (args[0].equalsIgnoreCase("setspawn")) {
+                if (args[1].equalsIgnoreCase("1")) {
+                    //Do something, perhaps send them a message?
+                	 Location l1 = player.getLocation();
+                	sender.sendMessage(ChatColor.GREEN + "Spawn 1 Set!");
+                  
+                }else if(args[1].equalsIgnoreCase("2")){
+                	 sender.sendMessage(ChatColor.GREEN + "Spawn 2 Set!");
+                	 Location l2 = player.getLocation();
+                	
+                }else if(args[1].equalsIgnoreCase("3")){
+                	sender.sendMessage(ChatColor.GREEN + "Spawn 3 Set!");
+                	Location l3 = player.getLocation();
+                	
+                }else if(args[1].equalsIgnoreCase("4")){
+               	 sender.sendMessage(ChatColor.GREEN + "Spawn 4 Set!");
+               	 Location l4 = player.getLocation();}
+                else if(args[1].equalsIgnoreCase("5")){
+               	 sender.sendMessage(ChatColor.GREEN + "Spawn 5 Set!");
+               	 Location l5 = player.getLocation();}
+                else if(args[1].equalsIgnoreCase("6")){
+               	 sender.sendMessage(ChatColor.GREEN + "Spawn 6 Set!");
+               	 Location l6 = player.getLocation();}
+                else if(args[1].equalsIgnoreCase("7")){
+               	 sender.sendMessage(ChatColor.GREEN + "Spawn 7 Set!");
+               	 Location l7 = player.getLocation();}
+                else if(args[0].equalsIgnoreCase("join")){
+                	player.setGameMode(GameMode.ADVENTURE);
+                	player.sendMessage(ChatColor.RED + "During the beta release, you cannot break blocks!");
+                	
+					player.teleport(l1);
+                	
+                }
+                else if(args[1].equalsIgnoreCase("8")){
+               	 sender.sendMessage(ChatColor.GREEN + "Spawn 8 Set!");
+               	 Location l8 = player.getLocation();
+               	 return true;
+            }
+        }
+    
+
+
+	
+
+
+
+	}
+	
+	}
+	return false; 
+}
+}
+
+
+
+
+
+
