@@ -4,4 +4,8 @@
 <fullyQualifiedTypeName name="org.bukkit.event.player.PlayerMoveEvent"/>
 <fullyQualifiedTypeName name="org.bukkit.entity.Player"/>
 <fullyQualifiedTypeName name="org.bukkit.Location"/>
+<fullyQualifiedTypeName name="org.bukkit.Material"/>
+<fullyQualifiedTypeName name="org.bukkit.WorldCreator"/>
+<fullyQualifiedTypeName name="org.bukkit.World.Environment"/>
+<fullyQualifiedTypeName name="org.bukkit.World"/>
 </qualifiedTypeNameHistroy>
